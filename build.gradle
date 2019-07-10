@@ -41,8 +41,8 @@ allprojects {
 	targetCompatibility = 1.8
 
 	//Project properties
-	project.group = 'ai.libs'
-	project.version = '0.1.5'
+	project.group = 'org.api4'
+	project.version = '0.0.1'
 	
 	ext {
 	    ossrhUsername = hasProperty('ossrhUsername') ? ossrhUsername : System.getenv("ossrhUsername")

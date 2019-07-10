@@ -11,10 +11,9 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
-import org.aeonbits.owner.Mutable;
-
-public interface IConfig extends Mutable {
+public interface IConfig extends Map<Object, Object> {
 
 	/**
 	 * Reads properties of a config from a config file.
