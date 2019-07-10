@@ -179,7 +179,9 @@ allprojects {
 
 
 dependencies{
-	compile project(":algorithms")
+	compile project(":common")
+	compile project(":algorithm")
+	compile project(":datastructure")
 }
 
 test{

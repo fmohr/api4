@@ -1,1 +1,3 @@
-include ":algorithms"
+include ":common"
+include ":algorithm"
+include ":datastructure"
