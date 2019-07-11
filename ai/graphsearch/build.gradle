@@ -1,0 +1,60 @@
+dependencies {
+  compile project(":common")
+  compile project(":algorithm")
+}
+
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			def ossrhUsername =  project.hasProperty('ossrhUsername') ? project.property('ossrhUsername') : ""
+			def ossrhPassword = project.hasProperty('ossrhPassword') ? project.property('ossrhPassword') : ""
+		
+			beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+			repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+        		authentication(userName: ossrhUsername, password: ossrhPassword)
+      		}	
+      		snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+        		authentication(userName: ossrhUsername, password: ossrhPassword)
+      		}
+
+      		pom.project {
+        		name 'api4-ai-graphsearch'
+        		packaging 'jar'
+        		// optionally artifactId can be defined here 
+        		description 'Fundamental utils required by many other starlibs projects.'
+        		url 'https://api4.org'
+
+        		scm {
+          			connection 'scm:git:https://github.com/fmohr/api4.git'
+          			developerConnection 'scm:git:https://github.com/fmohr/api4.git'
+          			url 'https://github.com/fmohr/api4'
+        		}
+
+        		licenses {
+          			license {
+            			name 'GPLv3'
+            			url 'https://www.gnu.org/licenses/gpl-3.0.en.html'
+          			}
+        		}
+
+        		developers {
+          			developer {
+            			id 'fmohr'
+            			name 'Felix Mohr'
+            			email 'felix.mohr@upb.de'
+          			}
+          			developer {
+          				id 'mwever'    
+          			    name 'Marcel Wever'
+          			    email 'marcel.wever@upb.de'
+          			}
+          			developer {
+          			    id 'ahetzer'
+          			    name 'Alexander Tornede'
+          			    email 'alexander.tornede@upb.de'
+          			}
+        		}
+      		}
+    	}
+  	}
+}

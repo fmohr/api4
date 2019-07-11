@@ -2,5 +2,7 @@ include ":common"
 include ":algorithm"
 include ":datastructure"
 include ":ai.ml"
+include ":ai.graphsearch"
 
 project(":ai.ml").projectDir = new File("ai/ml")
+project(":ai.graphsearch").projectDir = new File("ai/graphsearch")
