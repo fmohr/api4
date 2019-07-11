@@ -42,7 +42,7 @@ public interface IConfig extends Map<Object, Object> {
 	 */
 	default IConfig loadPropertiesFromResource(final String resourcePath) throws IOException {
 		// Get file from resources folder
-		ClassLoader classLoader = FileUtil.class.getClassLoader();
+		ClassLoader classLoader = this.getClass().getClassLoader();
 		String content = null;
 		try (InputStream inputStream = classLoader.getResourceAsStream(resourcePath)) {
 			ByteArrayOutputStream result = new ByteArrayOutputStream(1024);
@@ -76,18 +76,6 @@ public interface IConfig extends Map<Object, Object> {
 		return this;
 	}
 
-	/**
-	 * Reads the content of the given file as a list of strings.
-	 *
-	 * @param file The file to be read.
-	 * @return The list of strings representing the content of the file.
-	 * @throws IOException Thrown, if there are issues reading the file.
-	 */
-	public static List<String> readFileAsList(final File file) throws IOException {
-		if (file instanceof ResourceFile) {
-			return ResourceUtil.readResourceFileToStringList((ResourceFile) file);
-		} else {
-			return readFileAsList(file.getAbsolutePath());
-		}
-	}
+	public String setProperty(String key, String value);
+
 }
