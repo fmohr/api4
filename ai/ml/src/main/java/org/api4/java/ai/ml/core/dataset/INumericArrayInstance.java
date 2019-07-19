@@ -1,9 +1,8 @@
-package org.api4.java.ai.ml;
+package org.api4.java.ai.ml.core.dataset;
 
-import org.apache.commons.math3.ml.clustering.Clusterable;
 import org.api4.java.ai.ml.core.dataset.attribute.IAttributeValue;
 
-public interface INumericArrayInstance extends IAttributeArrayInstance, Clusterable {
+public interface INumericArrayInstance extends IAttributeArrayInstance {
 	public IAttributeValue<Double> getAttributeValue(int position);
 
 	/**
@@ -15,13 +14,4 @@ public interface INumericArrayInstance extends IAttributeArrayInstance, Clustera
 	 *             Thrown if the instance is to be converted into a double vector and still contains non-numeric attributes.
 	 */
 	public double[] getAsDoubleVector() throws ContainsNonNumericAttributesException;
-
-	@Override
-	default double[] getPoint() {
-		try {
-			return getAsDoubleVector();
-		} catch (ContainsNonNumericAttributesException e) {
-			throw new UnsupportedOperationException(e);
-		}
-	}
 }

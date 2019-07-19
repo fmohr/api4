@@ -1,4 +1,4 @@
-package org.api4.java.ai.ml;
+package org.api4.java.ai.ml.core.dataset;
 
 import org.api4.java.ai.ml.core.dataset.attribute.IAttributeValue;
 
@@ -9,9 +9,9 @@ import org.api4.java.ai.ml.core.dataset.attribute.IAttributeValue;
  *
  */
 public interface IAttributeArrayInstance {
-	
+
 	public IAttributeValue<?>[] getAllAttributeValues();
-	
+
 	/**
 	 * Getter for the value of an attribute for the given position.
 	 *

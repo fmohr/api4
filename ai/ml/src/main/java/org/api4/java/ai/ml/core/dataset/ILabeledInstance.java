@@ -1,4 +1,4 @@
-package org.api4.java.ai.ml;
+package org.api4.java.ai.ml.core.dataset;
 
 /**
  * Interface of an instance that has a target value.

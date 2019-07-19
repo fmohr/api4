@@ -1,4 +1,4 @@
-package org.api4.java.ai.ml;
+package org.api4.java.ai.ml.core.dataset;
 
 /**
  * Extends the {@link}IDataset by including the List interface.

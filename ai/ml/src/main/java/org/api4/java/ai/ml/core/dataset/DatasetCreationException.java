@@ -1,4 +1,4 @@
-package org.api4.java.ai.ml;
+package org.api4.java.ai.ml.core.dataset;
 
 @SuppressWarnings("serial")
 public class DatasetCreationException extends Exception {

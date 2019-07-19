@@ -1,4 +1,4 @@
-package org.api4.java.ai.ml;
+package org.api4.java.ai.ml.core.dataset;
 
 import java.util.Collection;
 

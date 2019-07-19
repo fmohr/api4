@@ -1,4 +1,4 @@
-package org.api4.java.ai.ml;
+package org.api4.java.ai.ml.core.dataset;
 
 /**
  * Type intersection interface for numeric instances on one hand and labeled instances on the other hand.
