@@ -1,5 +1,7 @@
 package org.api4.java.ai.graphsearch.problem.implicit.graphgenerator;
 
+import org.api4.java.datastructure.graph.IPath;
+
 public interface NodeGoalTester<N, A> extends PathGoalTester<N, A> {
 
 	/**
@@ -12,7 +14,7 @@ public interface NodeGoalTester<N, A> extends PathGoalTester<N, A> {
 	public boolean isGoal(N node);
 
 	@Override
-	default boolean isGoal(final IPath<N,A> path) {
+	default boolean isGoal(final IPath<N, A> path) {
 		return isGoal(path.getHead());
 	}
 }

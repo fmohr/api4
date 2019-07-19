@@ -1,4 +1,4 @@
-package org.api4.java.ai.graphsearch.problem.implicit.graphgenerator;
+package org.api4.java.datastructure.graph.implicit;
 
 public interface SingleSuccessorGenerator<T,A> extends SuccessorGenerator<T, A> {
 

@@ -1,5 +1,7 @@
 package org.api4.java.ai.graphsearch.problem.implicit.graphgenerator;
 
+import org.api4.java.datastructure.graph.IPath;
+
 public interface PathGoalTester<N, A> {
 
 	/**

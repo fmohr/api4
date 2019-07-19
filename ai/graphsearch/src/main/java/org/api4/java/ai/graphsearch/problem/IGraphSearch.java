@@ -1,7 +1,7 @@
 package org.api4.java.ai.graphsearch.problem;
 
-import org.api4.java.ai.graphsearch.problem.implicit.graphgenerator.IGraphGenerator;
 import org.api4.java.algorithm.IAlgorithm;
+import org.api4.java.datastructure.graph.implicit.IGraphGenerator;
 
 /**
  * Graph search algorithms take a graph <N, A> that is given in the form of a graph generator and search it.

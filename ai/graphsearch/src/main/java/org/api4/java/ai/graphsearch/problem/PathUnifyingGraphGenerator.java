@@ -2,7 +2,7 @@ package org.api4.java.ai.graphsearch.problem;
 
 import java.util.List;
 
-import org.api4.java.ai.graphsearch.problem.implicit.graphgenerator.IGraphGenerator;
+import org.api4.java.datastructure.graph.implicit.IGraphGenerator;
 
 /**
  * This is an extension of the classical GraphGenerator that allows to assert that a path is semantically subsumed by another.

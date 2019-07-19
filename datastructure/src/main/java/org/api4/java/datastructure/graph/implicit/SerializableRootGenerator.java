@@ -1,4 +1,4 @@
-package org.api4.java.ai.graphsearch.problem.implicit.graphgenerator;
+package org.api4.java.datastructure.graph.implicit;
 
 import java.io.Serializable;
 

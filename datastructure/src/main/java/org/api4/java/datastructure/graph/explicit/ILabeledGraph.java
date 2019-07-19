@@ -1,4 +1,4 @@
-package org.api4.java.datastructure.graph;
+package org.api4.java.datastructure.graph.explicit;
 
 public interface ILabeledGraph<N, A> extends IGraph<N> {
 
