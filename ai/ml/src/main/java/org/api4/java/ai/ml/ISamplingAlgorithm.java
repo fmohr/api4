@@ -1,6 +1,6 @@
 package org.api4.java.ai.ml;
 
-import org.api4.java.ai.ml.core.dataset.IDataset;
+import org.api4.java.ai.ml.dataset.IDataSource;
 import org.api4.java.algorithm.IAlgorithm;
 
 /**
@@ -9,6 +9,6 @@ import org.api4.java.algorithm.IAlgorithm;
  * @author fmohr
  *
  */
-public interface ISamplingAlgorithm <D extends IDataset<?>> extends IAlgorithm<D, D> {
+public interface ISamplingAlgorithm<D extends IDataSource> extends IAlgorithm<D, D> {
 
 }
