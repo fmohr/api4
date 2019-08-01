@@ -1,4 +1,6 @@
-package org.api4.java.ai.ml.algorithm;
+package org.api4.java.ai.ml.learner.fit;
+
+import org.api4.java.algorithm.exceptions.AlgorithmException;
 
 /**
  * The {@link TrainingException} indicates that an error occurred during a training process. Details concerning the error can be inferred from the associated message.
@@ -6,7 +8,7 @@ package org.api4.java.ai.ml.algorithm;
  * @author Alexander Hetzer
  *
  */
-public class TrainingException extends Exception {
+public class TrainingException extends AlgorithmException {
 
 	private static final long serialVersionUID = -3684777835122718847L;
 

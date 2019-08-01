@@ -2,7 +2,7 @@ package org.api4.java.ai.ml.activelearning;
 
 import java.util.Collection;
 
-import org.api4.java.ai.ml.core.dataset.ILabeledInstance;
+import org.api4.java.ai.ml.dataset.supervised.ILabeledInstance;
 
 /**
  * Provides a sample pool for pool-based active learning.

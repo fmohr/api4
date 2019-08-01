@@ -1,4 +1,6 @@
-package org.api4.java.ai.ml.algorithm;
+package org.api4.java.ai.ml.learner.predict;
+
+import org.api4.java.algorithm.exceptions.AlgorithmException;
 
 /**
  * The {@link PredictionException} indicates that an error occurred during a prediction process. Details concerning the error can be inferred from the associated message.
@@ -6,7 +8,7 @@ package org.api4.java.ai.ml.algorithm;
  * @author Alexander Hetzer
  *
  */
-public class PredictionException extends Exception {
+public class PredictionException extends AlgorithmException {
 
 	private static final long serialVersionUID = -6893506621839121367L;
 
