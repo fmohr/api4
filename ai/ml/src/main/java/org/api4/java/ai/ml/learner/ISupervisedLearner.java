@@ -1,9 +1,18 @@
 package org.api4.java.ai.ml.learner;
 
-import org.api4.java.ai.ml.dataset.IFeatureInstance;
+import org.api4.java.ai.ml.dataset.supervised.ILabeledDataSource;
 import org.api4.java.ai.ml.dataset.supervised.ILabeledInstance;
-import org.api4.java.ai.ml.dataset.supervised.ISupervisedDataSource;
 
-public interface ISupervisedLearner<C, X, Y, I extends IFeatureInstance<X> & ILabeledInstance<Y>, D extends ISupervisedDataSource<X, Y, I>> extends IFittablePredictor<X, Y, I, D>, IConfigHandler<C> {
+/**
+ *
+ * @author mwever
+ *
+ * @param <C>
+ * @param <X>
+ * @param <Y>
+ * @param <I>
+ * @param <D>
+ */
+public interface ISupervisedLearner<C, I extends ILabeledInstance, D extends ILabeledDataSource<I>> extends IFittablePredictor<I, D>, ILearnerConfigHandler<C> {
 
 }
