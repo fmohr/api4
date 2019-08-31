@@ -5,4 +5,7 @@ public interface INumericAttributeValue extends IAttributeValue {
 	@Override
 	public Double getValue();
 
+	@Override
+	public INumericAttribute getAttribute();
+
 }

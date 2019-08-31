@@ -1,10 +1,10 @@
 package org.api4.java.ai.ml.core.dataset.schema.attribute;
 
-import java.util.Set;
+import java.util.Collection;
 
 public interface IMultiLabelAttributeValue extends IAttributeValue {
 
 	@Override
-	public Set<String> getValue();
+	public Collection<String> getValue();
 
 }

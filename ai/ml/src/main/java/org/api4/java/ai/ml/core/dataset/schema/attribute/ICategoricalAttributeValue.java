@@ -1,11 +1,11 @@
 package org.api4.java.ai.ml.core.dataset.schema.attribute;
 
-public interface IStringAttributeValue extends IObjectAttributeValue<String> {
+public interface ICategoricalAttributeValue extends IAttributeValue {
 
 	@Override
 	public String getValue();
 
 	@Override
-	public IStringAttribute getAttribute();
+	public ICategoricalAttribute getAttribute();
 
 }
