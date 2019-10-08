@@ -31,4 +31,6 @@ public interface IAttribute extends Serializable {
 
 	public IAttributeValue getAsAttributeValue(Object object);
 
+	public double toDouble(Object object);
+
 }

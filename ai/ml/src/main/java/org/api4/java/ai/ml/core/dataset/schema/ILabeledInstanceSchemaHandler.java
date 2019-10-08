@@ -11,4 +11,8 @@ public interface ILabeledInstanceSchemaHandler extends IInstanceSchemaHandler {
 		return this.getInstanceSchema().getLabelAttribute();
 	}
 
+	public default String getRelationName() {
+		return this.getInstanceSchema().getRelationName();
+	}
+
 }

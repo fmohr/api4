@@ -21,6 +21,8 @@ public interface IInstance extends IInstanceSchemaHandler {
 	 */
 	public Object getAttributeValue(int pos);
 
+	public Object[] getAttributes();
+
 	public double[] getPoint();
 
 	public double getPointValue(int pos);
