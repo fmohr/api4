@@ -4,6 +4,9 @@ import org.api4.java.ai.ml.core.learner.algorithm.IPrediction;
 
 public interface ISingleLabelClassificationPrediction extends IPrediction {
 
+	@Override
+	public String getPrediction();
+
 	public String getLabelWithHighestProbability();
 
 	public double[] getClassDistribution();
