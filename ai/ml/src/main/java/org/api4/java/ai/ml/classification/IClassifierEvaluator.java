@@ -1,6 +1,6 @@
 package org.api4.java.ai.ml.classification;
 
-import org.api4.java.common.attributedobjects.IObjectEvaluator;
+import org.api4.java.ai.ml.core.evaluation.ISupervisedLearnerEvaluator;
 
-public interface IClassifierEvaluator<C extends IClassifier<?, ?>> extends IObjectEvaluator<C, Double> {
+public interface IClassifierEvaluator<C extends IClassifier<?, ?>> extends ISupervisedLearnerEvaluator<C> {
 }
