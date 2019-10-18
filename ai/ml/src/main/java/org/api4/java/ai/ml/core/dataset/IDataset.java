@@ -9,8 +9,8 @@ public interface IDataset<I extends IInstance> extends IDataSource<I>, List<I> {
 	@Override
 	public IDataset<I> createEmptyCopy() throws DatasetCreationException, InterruptedException;
 
+	@Override
 	public I get(int pos);
 
 	public Object[][] getFeatureMatrix();
-
 }

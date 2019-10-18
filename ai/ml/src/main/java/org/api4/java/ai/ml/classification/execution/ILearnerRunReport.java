@@ -1,6 +1,6 @@
 package org.api4.java.ai.ml.classification.execution;
 
-public interface IClassifierRunReport {
+public interface ILearnerRunReport {
 	public int getTrainingTimeInMS();
 	
 	public int getTestTimeInMS();

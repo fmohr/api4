@@ -1,7 +1,6 @@
 package org.api4.java.ai.ml.core.filter.unsupervised.sampling;
 
 import org.api4.java.ai.ml.core.dataset.IDataset;
-import org.api4.java.ai.ml.core.dataset.IInstance;
 import org.api4.java.algorithm.IAlgorithm;
 
 /**
@@ -10,6 +9,6 @@ import org.api4.java.algorithm.IAlgorithm;
  * @author fmohr
  *
  */
-public interface ISamplingAlgorithm<I extends IInstance, D extends IDataset<I>> extends IAlgorithm<D, D> {
+public interface ISamplingAlgorithm<D extends IDataset<?>> extends IAlgorithm<D, D> {
 
 }

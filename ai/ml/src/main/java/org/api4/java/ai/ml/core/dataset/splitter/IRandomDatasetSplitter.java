@@ -4,9 +4,8 @@ import java.util.List;
 import java.util.Random;
 
 import org.api4.java.ai.ml.core.dataset.IDataset;
-import org.api4.java.ai.ml.core.dataset.IInstance;
 
-public interface IRandomDatasetSplitter<I extends IInstance, D extends IDataset<I>> extends IDatasetSplitter<I, D> {
+public interface IRandomDatasetSplitter<D extends IDataset<?>> extends IDatasetSplitter<D> {
 
 	@Override
 	public default List<D> split(final D data) throws SplitFailedException, InterruptedException {
