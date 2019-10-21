@@ -1,5 +1,7 @@
 package org.api4.java.ai.ml.core.learner;
 
+import java.util.List;
+
 import org.api4.java.ai.ml.core.dataset.IDataSource;
 import org.api4.java.ai.ml.core.dataset.IInstance;
 import org.api4.java.ai.ml.core.exception.PredictionException;
@@ -9,8 +11,8 @@ public interface IFittablePredictor<I extends IInstance, D extends IDataSource<I
 
 	public Object fitAndPredict(D dTrain, I xTest) throws TrainingException, PredictionException, InterruptedException;
 
-	public Object fitAndPredict(D dTrain, I[] xTest) throws TrainingException, PredictionException, InterruptedException;
+	public Object[] fitAndPredict(D dTrain, I[] xTest) throws TrainingException, PredictionException, InterruptedException;
 
-	public Object fitAndPredict(D dTrain, D dTest) throws TrainingException, PredictionException, InterruptedException;
+	public List<?> fitAndPredict(D dTrain, D dTest) throws TrainingException, PredictionException, InterruptedException;
 
 }
