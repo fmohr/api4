@@ -2,7 +2,7 @@ package org.api4.java.ai.ml.classification.singlelabel.learner;
 
 import java.util.Map;
 
-import org.api4.java.ai.ml.core.learner.algorithm.IPrediction;
+import org.api4.java.ai.ml.core.evaluation.IPrediction;
 
 /**
  * Interface for classifier that predict a single label among a constant number.

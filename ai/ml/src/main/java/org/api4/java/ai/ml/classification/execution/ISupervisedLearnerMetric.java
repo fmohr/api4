@@ -2,7 +2,7 @@ package org.api4.java.ai.ml.classification.execution;
 
 import java.util.Collection;
 
-import org.api4.java.ai.ml.core.evaluation.loss.ILossFunction;
+import org.api4.java.ai.ml.core.evaluation.loss.IMeasure;
 import org.api4.java.common.attributedobjects.IObjectEvaluator;
 
 public interface ISupervisedLearnerMetric extends IObjectEvaluator<Collection<? extends ILearnerRunReport>, Double> {
@@ -14,5 +14,5 @@ public interface ISupervisedLearnerMetric extends IObjectEvaluator<Collection<? 
 
 	public double evaluateToDouble(Collection<? extends ILearnerRunReport> reports);
 
-	public ILossFunction getLossFunction();
+	public IMeasure getMeasure();
 }

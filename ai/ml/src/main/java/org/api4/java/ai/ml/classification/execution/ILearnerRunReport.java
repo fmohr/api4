@@ -1,5 +1,7 @@
 package org.api4.java.ai.ml.classification.execution;
 
+import org.api4.java.ai.ml.core.evaluation.IPredictionAndGroundTruthTable;
+
 public interface ILearnerRunReport {
 	public int getTrainingTimeInMS();
 	
@@ -9,5 +11,5 @@ public interface ILearnerRunReport {
 	
 	public String getTestSetDescriptor();
 	
-	public IClassificationPredictionAndGroundTruthTable getPredictionDiffList();
+	public IPredictionAndGroundTruthTable getPredictionDiffList();
 }

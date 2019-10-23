@@ -1,4 +1,4 @@
-package org.api4.java.ai.ml.core.learner.algorithm;
+package org.api4.java.ai.ml.core.evaluation;
 
 import java.util.List;
 
