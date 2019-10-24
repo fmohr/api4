@@ -1,7 +1,6 @@
 package org.api4.java.ai.ml.core.dataset.supervised;
 
 import org.api4.java.ai.ml.core.dataset.IInstance;
-import org.api4.java.ai.ml.core.dataset.schema.ILabeledInstanceSchemaHandler;
 
 /**
  * Interface of an instance that has a target value.
@@ -10,7 +9,7 @@ import org.api4.java.ai.ml.core.dataset.schema.ILabeledInstanceSchemaHandler;
  *
  * <Y> The type of the labeling of this instance.
  */
-public interface ILabeledInstance extends IInstance, ILabeledInstanceSchemaHandler {
+public interface ILabeledInstance extends IInstance {
 
 	/**
 	 * Getter for the value of the target attribute.
@@ -32,6 +31,7 @@ public interface ILabeledInstance extends IInstance, ILabeledInstanceSchemaHandl
 	 * @param pos The position where to replace the current value with the new value.
 	 * @param value The new attribute value (to replace the previous value).
 	 */
+	@Override
 	public void setAttributeValue(final int pos, final Object value);
 
 }
