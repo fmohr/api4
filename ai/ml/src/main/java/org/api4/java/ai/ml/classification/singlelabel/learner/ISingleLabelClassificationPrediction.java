@@ -6,7 +6,7 @@ import org.api4.java.ai.ml.core.evaluation.IPrediction;
 
 /**
  * Interface for classifier that predict a single label among a constant number.
- * 
+ *
  * The convention is that labels are integers starting from 0 to n - 1 where n is the number of classes.
  *
  */
@@ -14,14 +14,14 @@ public interface ISingleLabelClassificationPrediction extends IPrediction {
 
 	@Override
 	default Integer getPrediction() {
-		return getIntPrediction();
+		return this.getIntPrediction();
 	}
 
 	public int getIntPrediction();
 
 	public int getLabelWithHighestProbability();
 
-	public Map<String, Double> getClassDistribution();
+	public Map<Integer, Double> getClassDistribution();
 
 	public double getProbabilityOfLabel(int label);
 
