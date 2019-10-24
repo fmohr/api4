@@ -27,4 +27,6 @@ public interface IInstance extends IInstanceSchemaHandler {
 
 	public double getPointValue(int pos);
 
+	public void removeColumn(int columnPos);
+
 }
