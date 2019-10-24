@@ -1,7 +1,5 @@
 package org.api4.java.ai.ml.core.dataset;
 
-import org.api4.java.ai.ml.core.dataset.schema.IInstanceSchemaHandler;
-
 /**
  * Instances implementing this interface have a feature description of the type X.
  * Usually, feature descriptions are realized via double arrays. However, here it
@@ -12,7 +10,7 @@ import org.api4.java.ai.ml.core.dataset.schema.IInstanceSchemaHandler;
  *
  * @param <X> The type of the feature description of a single instance.
  */
-public interface IInstance extends IInstanceSchemaHandler {
+public interface IInstance {
 
 	/**
 	 *
@@ -28,5 +26,12 @@ public interface IInstance extends IInstanceSchemaHandler {
 	public double getPointValue(int pos);
 
 	public void removeColumn(int columnPos);
+
+	/**
+	 * Sets the value of the attribute at position <code>pos</code> to a new value as provided as an argument.
+	 * @param pos The position where to replace the current value with the new value.
+	 * @param value The new attribute value (to replace the previous value).
+	 */
+	public void setAttributeValue(final int pos, final Object value);
 
 }

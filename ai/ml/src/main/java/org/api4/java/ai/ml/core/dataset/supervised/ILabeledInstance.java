@@ -20,4 +20,18 @@ public interface ILabeledInstance extends IInstance, ILabeledInstanceSchemaHandl
 	 */
 	public Object getLabel();
 
+	/**
+	 * Sets the label of this instance to a new value as provided as an argument.
+	 *
+	 * @param obj The new label value for this instance.
+	 */
+	public void setLabel(Object obj);
+
+	/**
+	 * Sets the value of the attribute at position <code>pos</code> to a new value as provided as an argument.
+	 * @param pos The position where to replace the current value with the new value.
+	 * @param value The new attribute value (to replace the previous value).
+	 */
+	public void setAttributeValue(final int pos, final Object value);
+
 }
