@@ -8,4 +8,7 @@ public interface ILabeledInstanceSchema extends IInstanceSchema {
 
 	public void replaceLabelAttribute(IAttribute labelAttribute);
 
+	@Override
+	public ILabeledInstanceSchema getCopy();
+
 }
