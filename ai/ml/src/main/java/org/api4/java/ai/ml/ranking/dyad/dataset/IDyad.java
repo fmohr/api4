@@ -1,10 +1,12 @@
 package org.api4.java.ai.ml.ranking.dyad.dataset;
 
+import org.api4.java.common.math.IVector;
+
 public interface IDyad {
 
-	public Object getInstance();
+	public IVector getContext();
 
-	public Object getAlternative();
+	public IVector getAlternative();
 
 	public double[] toDoubleVector();
 

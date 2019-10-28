@@ -23,12 +23,15 @@ public interface IInstance {
 
 	public double[] getPoint();
 
-	public double getPointValue(int pos);
+	public default double getPointValue(int pos) {
+		return getPoint()[pos];
+	}
 
 	public void removeColumn(int columnPos);
 
 	/**
 	 * Sets the value of the attribute at position <code>pos</code> to a new value as provided as an argument.
+	 * 
 	 * @param pos The position where to replace the current value with the new value.
 	 * @param value The new attribute value (to replace the previous value).
 	 */

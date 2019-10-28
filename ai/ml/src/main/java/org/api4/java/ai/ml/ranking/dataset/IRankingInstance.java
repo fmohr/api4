@@ -8,4 +8,11 @@ public interface IRankingInstance<O> extends ILabeledInstance {
 	@Override
 	public IRanking<O> getLabel();
 
+	/**
+	 * Returns the number of ranked elements in this instance.
+	 * 
+	 * @return The number of ranked elements.
+	 */
+	public int getNumberOfRankedElements();
+
 }
