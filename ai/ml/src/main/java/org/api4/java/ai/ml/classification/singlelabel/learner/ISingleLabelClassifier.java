@@ -14,7 +14,7 @@ import org.api4.java.ai.ml.core.exception.TrainingException;
 public interface ISingleLabelClassifier extends IClassifier<ISingleLabelClassificationInstance, ISingleLabelClassificationDataset> {
 
 	@Override
-	public ISingleLabelClassificationPrediction fitAndPredict(ISingleLabelClassificationDataset dTrain, ISingleLabelClassificationInstance xTest) throws TrainingException, PredictionException, InterruptedException;
+	public ISingleLabelClassification fitAndPredict(ISingleLabelClassificationDataset dTrain, ISingleLabelClassificationInstance xTest) throws TrainingException, PredictionException, InterruptedException;
 
 	@Override
 	public ISingleLabelClassificationPredictionBatch fitAndPredict(ISingleLabelClassificationDataset dTrain, ISingleLabelClassificationInstance[] xTest) throws TrainingException, PredictionException, InterruptedException;
@@ -23,7 +23,7 @@ public interface ISingleLabelClassifier extends IClassifier<ISingleLabelClassifi
 	public ISingleLabelClassificationPredictionBatch fitAndPredict(ISingleLabelClassificationDataset dTrain, ISingleLabelClassificationDataset dTest) throws TrainingException, PredictionException, InterruptedException;
 
 	@Override
-	public ISingleLabelClassificationPrediction predict(ISingleLabelClassificationInstance xTest) throws PredictionException, InterruptedException;
+	public ISingleLabelClassification predict(ISingleLabelClassificationInstance xTest) throws PredictionException, InterruptedException;
 
 	@Override
 	public ISingleLabelClassificationPredictionBatch predict(ISingleLabelClassificationDataset dTest) throws PredictionException, InterruptedException;
