@@ -20,4 +20,6 @@ public interface IInstanceSchema {
 
 	public void addAttribute(IAttribute attribute);
 
+	public IInstanceSchema getCopy();
+
 }
