@@ -6,4 +6,7 @@ public interface ILabeledDataset<I extends ILabeledInstance> extends ILabeledDat
 
 	public Object[] getLabelVector();
 
+	@Override
+	public ILabeledDataset<I> createEmptyCopy();
+
 }

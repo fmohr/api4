@@ -1,6 +1,8 @@
-package org.api4.java.ai.ml.ranking.dataset;
+package org.api4.java.ai.ml.ranking;
 
 import java.util.List;
+
+import org.api4.java.ai.ml.core.evaluation.IPrediction;
 
 /**
  * A ranking is a function mapping assigning each object of a set of objects a rank, i.e. a
@@ -12,7 +14,7 @@ import java.util.List;
  *
  * @param <O> The type of objects which is ranked.
  */
-public interface IRanking<O> extends List<O> {
+public interface IRanking<O> extends List<O>, IPrediction {
 
 	/**
 	 * Retrieves the rank for the given object from this ranking.

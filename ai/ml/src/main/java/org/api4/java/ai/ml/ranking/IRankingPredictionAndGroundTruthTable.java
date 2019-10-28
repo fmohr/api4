@@ -3,7 +3,6 @@ package org.api4.java.ai.ml.ranking;
 import java.util.List;
 
 import org.api4.java.ai.ml.core.evaluation.IPredictionAndGroundTruthTable;
-import org.api4.java.ai.ml.ranking.dataset.IRanking;
 
 public interface IRankingPredictionAndGroundTruthTable extends IPredictionAndGroundTruthTable<IRanking<?>> {
 

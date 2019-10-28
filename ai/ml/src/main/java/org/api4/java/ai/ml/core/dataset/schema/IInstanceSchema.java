@@ -16,4 +16,8 @@ public interface IInstanceSchema {
 
 	public void removeAttribute(int columnPos);
 
+	public void addAttribute(int pos, IAttribute attribute);
+
+	public void addAttribute(IAttribute attribute);
+
 }

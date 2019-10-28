@@ -6,9 +6,9 @@ public interface ISingleLabelClassificationInstance extends ILabeledInstance {
 
 	@Override
 	default Integer getLabel() {
-		return getIntLabel();
+		return this.getIntLabel();
 	}
-	
+
 	public int getIntLabel();
 
 }
