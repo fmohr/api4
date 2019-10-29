@@ -17,21 +17,27 @@ public interface IInstance {
 	 * @param pos The position of the feature that is to be returned.
 	 * @return The feature value at position <code>pos</code>.
 	 */
-	public Object getAttributeValue(int pos);
+	default Object getAttributeValue(final int pos) {
+		return this.getAttributes()[pos];
+	}
 
 	public Object[] getAttributes();
 
+	default int getNumAttributes() {
+		return this.getAttributes().length;
+	}
+
 	public double[] getPoint();
 
-	public default double getPointValue(int pos) {
-		return getPoint()[pos];
+	public default double getPointValue(final int pos) {
+		return this.getPoint()[pos];
 	}
 
 	public void removeColumn(int columnPos);
 
 	/**
 	 * Sets the value of the attribute at position <code>pos</code> to a new value as provided as an argument.
-	 * 
+	 *
 	 * @param pos The position where to replace the current value with the new value.
 	 * @param value The new attribute value (to replace the previous value).
 	 */
