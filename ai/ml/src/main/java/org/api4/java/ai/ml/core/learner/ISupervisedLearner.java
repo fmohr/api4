@@ -12,6 +12,6 @@ import org.api4.java.ai.ml.core.dataset.supervised.ILabeledInstance;
  * @param <I>
  * @param <D>
  */
-public interface ISupervisedLearner<I extends ILabeledInstance, D extends ILabeledDataSource<I>> extends IFittablePredictor<I, D>, ILearnerConfigHandler {
+public interface ISupervisedLearner<I extends ILabeledInstance, D extends ILabeledDataSource<? extends I>> extends IFittablePredictor<I, D>, ILearnerConfigHandler {
 
 }

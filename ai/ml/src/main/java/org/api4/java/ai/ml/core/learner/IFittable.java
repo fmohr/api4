@@ -4,7 +4,7 @@ import org.api4.java.ai.ml.core.dataset.IDataSource;
 import org.api4.java.ai.ml.core.dataset.IInstance;
 import org.api4.java.ai.ml.core.exception.TrainingException;
 
-public interface IFittable<I extends IInstance, D extends IDataSource<I>> {
+public interface IFittable<I extends IInstance, D extends IDataSource<? extends I>> {
 
 	public void fit(D dTrain) throws TrainingException, InterruptedException;
 

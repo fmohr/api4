@@ -24,7 +24,7 @@ public interface IListDecorator<L extends List<E>, E, D extends IElementDecorato
 
 	public Class<E> getTypeOfDecoratedItems();
 
-	public Constructor<D> getConstructorForDecoratedItems();
+	public Constructor<? extends D> getConstructorForDecoratedItems();
 
 	public L getList();
 
