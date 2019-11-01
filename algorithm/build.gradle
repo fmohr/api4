@@ -1,5 +1,5 @@
 dependencies {
-  compile project(":common")
+  compile project(":api4-common")
 }
 
 uploadArchives {
