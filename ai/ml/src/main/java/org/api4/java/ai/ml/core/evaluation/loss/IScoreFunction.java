@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.api4.java.ai.ml.core.evaluation.IPredictionAndGroundTruthTable;
 
-public interface IScoreFunction<O, T extends IPredictionAndGroundTruthTable> {
+public interface IScoreFunction<O, T extends IPredictionAndGroundTruthTable<O>> {
 
 	public double score(List<O> expected, List<O> actual);
 

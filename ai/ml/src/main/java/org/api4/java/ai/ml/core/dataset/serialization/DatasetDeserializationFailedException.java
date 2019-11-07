@@ -12,6 +12,11 @@ public class DatasetDeserializationFailedException extends Exception {
 	/**
 	 *
 	 */
+	private static final long serialVersionUID = -421369124414060380L;
+
+	/**
+	 *
+	 */
 	public DatasetDeserializationFailedException() {
 		// nothing to do here
 	}

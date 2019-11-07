@@ -14,5 +14,5 @@ public interface ISupervisedLearnerMetric extends IObjectEvaluator<Collection<? 
 
 	public double evaluateToDouble(Collection<? extends ILearnerRunReport> reports);
 
-	public IMeasure getMeasure();
+	public IMeasure<?, ?> getMeasure();
 }
