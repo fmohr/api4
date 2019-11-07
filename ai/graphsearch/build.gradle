@@ -1,7 +1,7 @@
 dependencies {
-  compile project(":api4-common")
-  compile project(":api4-datastructure")
-  compile project(":api4-algorithm")
+  compile project(":common")
+  compile project(":datastructure")
+  compile project(":algorithm")
 }
 
 uploadArchives {

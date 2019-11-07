@@ -1,4 +1,4 @@
-package org.api4.java.ai.ml.classification.singlelabel.learner;
+package org.api4.java.ai.ml.classification.singlelabel.evaluation;
 
 import java.util.List;
 

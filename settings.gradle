@@ -1,14 +1,14 @@
-include 'api4-common'
-project(":api4-common").projectDir = new File("common")
+include 'common'
+project(":common").projectDir = new File("common")
 
-include 'api4-algorithm'
-project(":api4-algorithm").projectDir = new File("algorithm")
+include 'algorithm'
+project(":algorithm").projectDir = new File("algorithm")
 
-include 'api4-datastructure'
-project(":api4-datastructure").projectDir = new File("datastructure")
+include 'datastructure'
+project(":datastructure").projectDir = new File("datastructure")
 
-include 'api4-ai-ml'
-project(":api4-ai-ml").projectDir = new File("ai/ml")
+include 'ai-ml'
+project(":ai-ml").projectDir = new File("ai/ml")
 
-include 'api4-ai-graphsearch'
-project(":api4-ai-graphsearch").projectDir = new File("ai/graphsearch")
+include 'ai-graphsearch'
+project(":ai-graphsearch").projectDir = new File("ai/graphsearch")

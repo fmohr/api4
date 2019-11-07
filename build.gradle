@@ -158,11 +158,11 @@ allprojects {
 
 
 dependencies{
-	compile project(":api4-common")
-	compile project(":api4-algorithm")
-	compile project(":api4-datastructure")
-	compile project(":api4-ai-ml")
-	compile project(":api4-ai-graphsearch")
+	compile project(":common")
+	compile project(":algorithm")
+	compile project(":datastructure")
+	compile project(":ai-ml")
+	compile project(":ai-graphsearch")
 }
 
 test{
