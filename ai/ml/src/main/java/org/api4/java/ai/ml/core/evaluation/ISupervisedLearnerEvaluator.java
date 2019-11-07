@@ -11,6 +11,6 @@ import org.api4.java.common.attributedobjects.IObjectEvaluator;
  *
  * There is no special reason to be limited to specific types of learners here
  */
-public interface ISupervisedLearnerEvaluator<I extends ILabeledInstance, D extends ILabeledDataset<I>> extends IObjectEvaluator<ISupervisedLearner<I, D>, Double> {
+public interface ISupervisedLearnerEvaluator<I extends ILabeledInstance, D extends ILabeledDataset<? extends I>> extends IObjectEvaluator<ISupervisedLearner<I, D>, Double> {
 
 }
