@@ -1,5 +1,6 @@
 package org.api4.java.ai.ml.core.dataset;
 
+import org.api4.java.ai.ml.core.dataset.descriptor.IDatasetDescriptor;
 import org.api4.java.ai.ml.core.exception.DatasetCreationException;
 
 public interface IDatasetBuilder {
