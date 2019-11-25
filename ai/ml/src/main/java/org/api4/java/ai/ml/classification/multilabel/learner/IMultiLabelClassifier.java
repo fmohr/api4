@@ -11,19 +11,19 @@ import org.api4.java.ai.ml.core.exception.TrainingException;
 public interface IMultiLabelClassifier extends IClassifier {
 
 	@Override
-	public IMultiLabelClassification fitAndPredict(ILabeledDataset<ILabeledInstance> dTrain, ILabeledInstance xTest) throws TrainingException, PredictionException, InterruptedException;
+	public IMultiLabelClassification fitAndPredict(ILabeledDataset<? extends ILabeledInstance> dTrain, ILabeledInstance xTest) throws TrainingException, PredictionException, InterruptedException;
 
 	@Override
-	public IMultiLabelClassificationPredictionBatch fitAndPredict(ILabeledDataset<ILabeledInstance> dTrain, ILabeledInstance[] xTest) throws TrainingException, PredictionException, InterruptedException;
+	public IMultiLabelClassificationPredictionBatch fitAndPredict(ILabeledDataset<? extends ILabeledInstance> dTrain, ILabeledInstance[] xTest) throws TrainingException, PredictionException, InterruptedException;
 
 	@Override
-	public IMultiLabelClassificationPredictionBatch fitAndPredict(ILabeledDataset<ILabeledInstance> dTrain, ILabeledDataset<ILabeledInstance> dTest) throws TrainingException, PredictionException, InterruptedException;
+	public IMultiLabelClassificationPredictionBatch fitAndPredict(ILabeledDataset<? extends ILabeledInstance> dTrain, ILabeledDataset<? extends ILabeledInstance> dTest) throws TrainingException, PredictionException, InterruptedException;
 
 	@Override
 	public IMultiLabelClassification predict(ILabeledInstance xTest) throws PredictionException, InterruptedException;
 
 	@Override
-	public IMultiLabelClassificationPredictionBatch predict(ILabeledDataset<ILabeledInstance> dTest) throws PredictionException, InterruptedException;
+	public IMultiLabelClassificationPredictionBatch predict(ILabeledDataset<? extends ILabeledInstance> dTest) throws PredictionException, InterruptedException;
 
 	@Override
 	public IMultiLabelClassificationPredictionBatch predict(ILabeledInstance[] dTest) throws PredictionException, InterruptedException;
