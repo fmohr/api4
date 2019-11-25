@@ -13,7 +13,7 @@ import org.api4.java.ai.ml.core.exception.TrainingException;
  * @author mwever
  *
  */
-public interface ISingleLabelClassifier extends IClassifier<ILabeledInstance, ILabeledDataset<ILabeledInstance>> {
+public interface ISingleLabelClassifier extends IClassifier {
 
 	@Override
 	public ISingleLabelClassification fitAndPredict(ILabeledDataset<ILabeledInstance> dTrain, ILabeledInstance xTest) throws TrainingException, PredictionException, InterruptedException;
