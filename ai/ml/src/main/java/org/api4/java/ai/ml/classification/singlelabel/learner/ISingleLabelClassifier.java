@@ -16,19 +16,19 @@ import org.api4.java.ai.ml.core.exception.TrainingException;
 public interface ISingleLabelClassifier extends IClassifier {
 
 	@Override
-	public ISingleLabelClassification fitAndPredict(ILabeledDataset<ILabeledInstance> dTrain, ILabeledInstance xTest) throws TrainingException, PredictionException, InterruptedException;
+	public ISingleLabelClassification fitAndPredict(ILabeledDataset<? extends ILabeledInstance> dTrain, ILabeledInstance xTest) throws TrainingException, PredictionException, InterruptedException;
 
 	@Override
-	public ISingleLabelClassificationPredictionBatch fitAndPredict(ILabeledDataset<ILabeledInstance> dTrain, ILabeledInstance[] xTest) throws TrainingException, PredictionException, InterruptedException;
+	public ISingleLabelClassificationPredictionBatch fitAndPredict(ILabeledDataset<? extends ILabeledInstance> dTrain, ILabeledInstance[] xTest) throws TrainingException, PredictionException, InterruptedException;
 
 	@Override
-	public ISingleLabelClassificationPredictionBatch fitAndPredict(ILabeledDataset<ILabeledInstance> dTrain, ILabeledDataset<ILabeledInstance> dTest) throws TrainingException, PredictionException, InterruptedException;
+	public ISingleLabelClassificationPredictionBatch fitAndPredict(ILabeledDataset<? extends ILabeledInstance> dTrain, ILabeledDataset<? extends ILabeledInstance> dTest) throws TrainingException, PredictionException, InterruptedException;
 
 	@Override
 	public ISingleLabelClassification predict(ILabeledInstance xTest) throws PredictionException, InterruptedException;
 
 	@Override
-	public ISingleLabelClassificationPredictionBatch predict(ILabeledDataset<ILabeledInstance> dTest) throws PredictionException, InterruptedException;
+	public ISingleLabelClassificationPredictionBatch predict(ILabeledDataset<? extends ILabeledInstance> dTest) throws PredictionException, InterruptedException;
 
 	@Override
 	public ISingleLabelClassificationPredictionBatch predict(ILabeledInstance[] dTest) throws PredictionException, InterruptedException;

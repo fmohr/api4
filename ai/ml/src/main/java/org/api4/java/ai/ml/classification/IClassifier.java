@@ -11,6 +11,6 @@ import org.api4.java.ai.ml.core.learner.ISupervisedLearner;
  * @param <I>
  * @param <D>
  */
-public interface IClassifier extends ISupervisedLearner<ILabeledInstance, ILabeledDataset<ILabeledInstance>> {
+public interface IClassifier extends ISupervisedLearner<ILabeledInstance, ILabeledDataset<? extends ILabeledInstance>> {
 
 }
