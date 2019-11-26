@@ -4,5 +4,5 @@ import org.api4.java.ai.ml.core.dataset.supervised.ILabeledDataset;
 import org.api4.java.ai.ml.core.dataset.supervised.ILabeledInstance;
 import org.api4.java.ai.ml.core.evaluation.ISupervisedLearnerEvaluator;
 
-public interface IClassifierEvaluator<I extends ILabeledInstance, D extends ILabeledDataset<? extends I>> extends ISupervisedLearnerEvaluator<I, D> {
+public interface IClassifierEvaluator extends ISupervisedLearnerEvaluator<ILabeledInstance, ILabeledDataset<?>> {
 }
