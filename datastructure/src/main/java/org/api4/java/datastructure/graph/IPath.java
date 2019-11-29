@@ -4,10 +4,22 @@ import java.util.List;
 
 public interface IPath<N, A> {
 
+	public IPath<N, A> getUnmodifiableAccessor();
+
 	public N getRoot();
 
 	public N getHead();
 
+	public N getParentOfHead();
+
+	public void extend(N newHead, A arcToNewHead);
+
+	public void cutHead();
+
+	/**
+	 * The difference to cut is that a new object is created
+	 * @return
+	 */
 	public IPath<N, A> getPathToParentOfHead();
 
 	public IPath<N, A> getPathFromChildOfRoot();
