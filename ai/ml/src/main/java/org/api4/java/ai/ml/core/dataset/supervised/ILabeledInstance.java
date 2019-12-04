@@ -20,6 +20,15 @@ public interface ILabeledInstance extends IInstance {
 	public Object getLabel();
 
 	/**
+	 * Tells whether the label is really there.
+	 *
+	 * @return
+	 */
+	default public boolean isLabelPresent() {
+		return this.getLabel() != null;
+	}
+
+	/**
 	 * Sets the label of this instance to a new value as provided as an argument.
 	 *
 	 * @param obj The new label value for this instance.

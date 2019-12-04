@@ -21,6 +21,10 @@ public interface IInstance {
 		return this.getAttributes()[pos];
 	}
 
+	default boolean isAttributeValuePresent(final int pos) {
+		return this.getAttributeValue(pos) != null;
+	}
+
 	public Object[] getAttributes();
 
 	default int getNumAttributes() {
