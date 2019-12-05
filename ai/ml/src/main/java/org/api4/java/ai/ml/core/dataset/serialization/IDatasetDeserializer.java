@@ -12,6 +12,6 @@ import org.api4.java.ai.ml.core.dataset.descriptor.IDatasetDescriptor;
  */
 public interface IDatasetDeserializer<D extends IDataset<?>> {
 
-	public D deserializeDataset(final IDatasetDescriptor datasetFile) throws DatasetDeserializationFailedException, InterruptedException;
+	public D deserializeDataset(final IDatasetDescriptor datasetDescription) throws DatasetDeserializationFailedException, InterruptedException;
 
 }
