@@ -5,10 +5,10 @@ import org.api4.java.ai.ml.core.learner.ISupervisedLearner;
 
 public interface ISupervisedLearnerExecutor<D extends ILabeledDataset<?>> {
 
-	public ILearnerRunReport execute(ISupervisedLearner<?, D> learner, D train, D test) throws LearnerExecutionFailedException;
+	public ILearnerRunReport execute(ISupervisedLearner<?, D> learner, D train, D test) throws LearnerExecutionFailedException, LearnerExecutionInterruptedException;
 
 	/**
 	 * Here, the classifier is assumed to be trained already
 	 **/
-	public ILearnerRunReport execute(ISupervisedLearner<?, D> learner, D test) throws LearnerExecutionFailedException;
+	public ILearnerRunReport execute(ISupervisedLearner<?, D> learner, D test) throws LearnerExecutionFailedException, LearnerExecutionInterruptedException;
 }
