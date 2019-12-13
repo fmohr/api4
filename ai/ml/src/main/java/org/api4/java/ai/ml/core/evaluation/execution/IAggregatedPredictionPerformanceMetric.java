@@ -5,7 +5,7 @@ import java.util.Collection;
 import org.api4.java.ai.ml.core.evaluation.supervised.loss.IDeterministicPredictionPerformanceMeasure;
 import org.api4.java.common.attributedobjects.IObjectEvaluator;
 
-public interface ISupervisedLearnerMetric extends IObjectEvaluator<Collection<? extends ILearnerRunReport>, Double> {
+public interface IAggregatedPredictionPerformanceMetric extends IObjectEvaluator<Collection<? extends ILearnerRunReport>, Double> {
 
 	@Override
 	default Double evaluate(final Collection<? extends ILearnerRunReport> reports) {

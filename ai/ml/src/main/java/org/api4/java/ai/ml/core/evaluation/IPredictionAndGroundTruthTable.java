@@ -2,19 +2,19 @@ package org.api4.java.ai.ml.core.evaluation;
 
 import java.util.List;
 
-public interface IPredictionAndGroundTruthTable<O> {
+public interface IPredictionAndGroundTruthTable<S, T> {
 
 	public int size();
 
-	public O getPrediction(int instance);
+	public S getPrediction(int instance);
 
-	public O getGroundTruth(int instance);
+	public T getGroundTruth(int instance);
 
-	public List<O> getPredictionsAsList();
+	public List<S> getPredictionsAsList();
 
-	public O[] getPredictionsAsArray();
+	public S[] getPredictionsAsArray();
 
-	public List<O> getGroundTruthAsList();
+	public List<T> getGroundTruthAsList();
 
-	public O[] getGroundTruthAsArray();
+	public T[] getGroundTruthAsArray();
 }

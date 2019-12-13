@@ -18,5 +18,5 @@ public interface ILearnerRunReport {
 
 	public ILabeledDataset<?> getTestSet();
 
-	public IPredictionAndGroundTruthTable getPredictionDiffList();
+	public IPredictionAndGroundTruthTable<?, ?> getPredictionDiffList();
 }
