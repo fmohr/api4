@@ -8,4 +8,11 @@ public interface IMultiLabelClassificationPredictionBatch extends IPredictionBat
 
 	@Override
 	public List<? extends IMultiLabelClassification> getPredictions();
+
+	public double[][] getPredictionMatrix();
+
+	public int[][] getThresholdedPredictionMatrix(double threshold);
+
+	public int[][] getThresholdedPredictionMatrix(double[] threshold);
+
 }

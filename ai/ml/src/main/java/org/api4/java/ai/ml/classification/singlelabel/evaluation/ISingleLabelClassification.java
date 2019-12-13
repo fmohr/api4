@@ -19,13 +19,10 @@ public interface ISingleLabelClassification extends IPrediction {
 
 	public int getIntPrediction();
 
-	@Override
 	public Integer getLabelWithHighestProbability();
 
-	@Override
 	public Map<Integer, Double> getClassDistribution();
 
-	@Override
 	public Map<Integer, Double> getClassConfidence();
 
 	public double getProbabilityOfLabel(int label);

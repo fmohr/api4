@@ -1,20 +1,20 @@
 package org.api4.java.ai.ml.classification.multilabel.evaluation;
 
-import java.util.List;
-
 import org.api4.java.ai.ml.core.evaluation.IPrediction;
 
 public interface IMultiLabelClassification extends IPrediction {
 
 	@Override
-	public List<String> getPrediction();
+	public double[] getPrediction();
 
-	public List<String> getLabelSet();
+	public int[] getThresholdedPrediction();
 
-	public List<String> getIrrelevantLabels();
+	public int[] getPrediction(double threshold);
 
-	public double[] getLabelRelevanceVector();
+	public int[] getPrediction(final double[] threshold);
 
-	public int[] getLabelRelevanceVector(double threshold);
+	public int[] getRelevantLabels(double threshold);
+
+	public int[] getIrrelevantLabels(double threshold);
 
 }
