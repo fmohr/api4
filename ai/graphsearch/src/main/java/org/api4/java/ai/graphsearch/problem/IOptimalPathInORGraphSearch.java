@@ -18,6 +18,6 @@ import org.api4.java.algorithm.IOptimizationAlgorithm;
  * @param <NSearch>
  * @param <Asearch>
  */
-public interface IOptimalPathInORGraphSearch<I extends IGraphSearchInput<N, A>, O extends IEvaluatedPath<N, A, V>, N, A, V extends Comparable<V>> extends IOptimizationAlgorithm<I, O, V>, IPathInORGraphSearch<I, O, N, A> {
+public interface IOptimalPathInORGraphSearch<I extends IPathSearchInput<N, A>, O extends IEvaluatedPath<N, A, V>, N, A, V extends Comparable<V>> extends IOptimizationAlgorithm<I, O, V>, IPathInORGraphSearch<I, O, N, A> {
 
 }
