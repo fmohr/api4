@@ -12,6 +12,7 @@ import java.util.List;
  */
 public interface ILabeledPath<N, A> extends IPath<N> {
 
+	@Override
 	public ILabeledPath<N, A> getUnmodifiableAccessor();
 
 	/**
@@ -44,4 +45,10 @@ public interface ILabeledPath<N, A> extends IPath<N> {
 	 * @return The label of the arc going away from the given node
 	 */
 	public A getOutArc(N node);
+
+
+	@Override
+	default void extend(final N newHead) {
+		throw new UnsupportedOperationException("Labeled paths must be extended by a new head AND a label.");
+	}
 }
