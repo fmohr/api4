@@ -1,6 +1,6 @@
 package org.api4.java.ai.graphsearch.problem.implicit.graphgenerator;
 
-import org.api4.java.datastructure.graph.IPath;
+import org.api4.java.datastructure.graph.ILabeledPath;
 
 public interface PathGoalTester<N, A> {
 
@@ -11,5 +11,5 @@ public interface PathGoalTester<N, A> {
 	 *            The path to check.
 	 * @return <code>true</code> if it is a goal, <code>false</else> otherwise.
 	 */
-	public boolean isGoal(IPath<N, A> path);
+	public boolean isGoal(ILabeledPath<N, A> path);
 }

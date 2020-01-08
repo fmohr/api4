@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Generic interface of KVStores allowing convenient access to the data contained.
  *
- * @author mwever
+ * @author Marcel Wever
  *
  */
 public interface IKVStore extends Map<String, Object> {
@@ -77,7 +77,7 @@ public interface IKVStore extends Map<String, Object> {
 	 * @param objectClass
 	 * 	   		  The class object for which a concrete object is to be returned.
 	 */
-	public Object getAsObject(final String key, final Class<?> objectClass) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException;
+	public <T> T getAsObject(final String key, final Class<T> objectClass) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException;
 
 	/**
 	 * Returns a value as byte array for the given key.
