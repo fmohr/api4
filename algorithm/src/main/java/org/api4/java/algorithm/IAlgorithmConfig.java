@@ -2,6 +2,12 @@ package org.api4.java.algorithm;
 
 import org.api4.java.common.control.IConfig;
 
+/**
+ * Defines some basic properties relevant to all algorithms.
+ *
+ * @author Felix Mohr
+ *
+ */
 public interface IAlgorithmConfig extends IConfig {
 
 	/**

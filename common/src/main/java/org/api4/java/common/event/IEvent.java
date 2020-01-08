@@ -7,4 +7,8 @@ package org.api4.java.common.event;
  */
 public interface IEvent {
 
+	/**
+	 * @return the time when this event has occurred
+	 */
+	public long getTimestamp();
 }

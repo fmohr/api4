@@ -3,15 +3,13 @@ package org.api4.java.algorithm;
 import org.api4.java.common.attributedobjects.ScoredItem;
 
 /**
- * Optimizers usually do not compute their output ad-hoc but, in many iterations, update the currently best known solution.
- * Hence, optimizers are iterators for solution candidates, and we demand the possibility to ask for next such candidates.
- * 
- * @author fmohr
+ * Optimizers are special cases of {@link ISolutionCandidateIterator} algorithms that assign a score to each solution candidate.
+ * @author Felix Mohr
  *
- * @param <I>
- * @param <O>
- * @param <V>
+ * @param <I> type of inputs
+ * @param <O> type of outputs
+ * @param <V> score assigned to solutions
  */
 public interface IOptimizationAlgorithm<I, O extends ScoredItem<V>, V extends Comparable<V>> extends IAlgorithm<I, O>, ISolutionCandidateIterator<I, O> {
-	
+
 }

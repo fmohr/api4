@@ -3,13 +3,18 @@ package org.api4.java.algorithm;
 import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
 
-@SuppressWarnings("serial")
-public class TimeOut implements Serializable {
-
+/**
+ * A standard utility class to express and convert timeouts
+ *
+ * @author Marcel Wever
+ *
+ */
+public class Timeout implements Serializable {
+	private static final long serialVersionUID = -3299312927082008461L;
 	private final TimeUnit unit;
 	private final long duration;
 
-	public TimeOut(final long duration, final TimeUnit unit) {
+	public Timeout(final long duration, final TimeUnit unit) {
 		this.duration = duration;
 		this.unit = unit;
 	}
@@ -60,7 +65,7 @@ public class TimeOut implements Serializable {
 		if (obj == null || this.getClass() != obj.getClass()) {
 			return false;
 		}
-		TimeOut other = (TimeOut) obj;
+		Timeout other = (Timeout) obj;
 		if (this.duration != other.duration) {
 			return false;
 		}

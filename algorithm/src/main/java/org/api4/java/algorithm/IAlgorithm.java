@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
-import org.api4.java.algorithm.events.AlgorithmEvent;
+import org.api4.java.algorithm.events.IAlgorithmEvent;
 import org.api4.java.algorithm.exceptions.AlgorithmException;
 import org.api4.java.algorithm.exceptions.AlgorithmExecutionCanceledException;
 import org.api4.java.algorithm.exceptions.AlgorithmTimeoutedException;
@@ -19,14 +19,14 @@ import org.api4.java.common.control.ICancelable;
  * only represents one run, so there is really no reason to have an additional object only to hold
  * the state.
  *
- * @author fmohr
+ * @author Felix Mohr
  *
  * @param <I>
  *            class of which inputs stems from
  * @param <O>
  *            class of which solution candidates and the eventually returned result stem from
  */
-public interface IAlgorithm<I, O> extends Iterable<AlgorithmEvent>, Iterator<AlgorithmEvent>, Callable<O>, ICancelable {
+public interface IAlgorithm<I, O> extends Iterable<IAlgorithmEvent>, Iterator<IAlgorithmEvent>, Callable<O>, ICancelable {
 
 	/**
 	 * @return The input that has been given to the algorithm.
@@ -87,12 +87,12 @@ public interface IAlgorithm<I, O> extends Iterable<AlgorithmEvent>, Iterator<Alg
 	 * @param timeout
 	 *            The timeout for the algorithm.
 	 */
-	public void setTimeout(TimeOut timeout);
+	public void setTimeout(Timeout timeout);
 
 	/**
 	 * @return The timeout for the algorithm.
 	 */
-	public TimeOut getTimeout();
+	public Timeout getTimeout();
 
 	/**
 	 * Continues the execution of the algorithm until the next event is emitted.
@@ -100,7 +100,7 @@ public interface IAlgorithm<I, O> extends Iterable<AlgorithmEvent>, Iterator<Alg
 	 * @return The next event occuring during the execution of the algorithm.
 	 * @throws Exception
 	 */
-	public AlgorithmEvent nextWithException() throws InterruptedException, AlgorithmExecutionCanceledException, AlgorithmTimeoutedException, AlgorithmException;
+	public IAlgorithmEvent nextWithException() throws InterruptedException, AlgorithmExecutionCanceledException, AlgorithmTimeoutedException, AlgorithmException;
 
 	/**
 	 * @return The config interface to store parameters to the algorithm in.
@@ -114,7 +114,8 @@ public interface IAlgorithm<I, O> extends Iterable<AlgorithmEvent>, Iterator<Alg
 	public O call() throws InterruptedException, AlgorithmExecutionCanceledException, AlgorithmTimeoutedException, AlgorithmException;
 
 	/**
-	 * globally unique identifier for the algorithm run
+	 * globally unique identifier for the algorithm run.
+	 * This id must be the same as used when issuing events.
 	 *
 	 * @return
 	 */
