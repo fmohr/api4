@@ -1,6 +1,6 @@
 package org.api4.java.ai.graphsearch.problem;
 
-import org.api4.java.ai.graphsearch.problem.implicit.graphgenerator.PathGoalTester;
+import org.api4.java.ai.graphsearch.problem.implicit.graphgenerator.IPathGoalTester;
 import org.api4.java.datastructure.graph.implicit.IGraphGenerator;
 
 /**
@@ -22,5 +22,5 @@ public interface IPathSearchInput<N, A> {
 	/**
 	 * @return A function that can test whether a given path is a solution path
 	 */
-	public PathGoalTester<N, A> getGoalTester();
+	public IPathGoalTester<N, A> getGoalTester();
 }
