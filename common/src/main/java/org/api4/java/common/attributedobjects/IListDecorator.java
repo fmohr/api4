@@ -10,22 +10,60 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
+/**
+ * The IListDecorator can be used treat a list of objects of type E as a list of objects of another (potentially unrelated) decorator type D.
+ *
+ * This can be helpful if you want to treat some list class L of a third-party library as a list of elements you need in your specific context.
+ * You cannot change the definitions of L (and the interfaces it implements), but you can create a simple wrapper for L that implements the
+ * desired interface (and the IListDecorator) and then forward the invocations on this list to the original list.
+ *
+ * This interface is closely related to the {@link IListView} interface. The difference is that {@link IListView} aims at re-casting the element
+ * type defined in the list generics. {@link IListView} can be seen as a special case of this interface in that the decorator must be connected
+ * to the list elements in the type hierarchy.
+ *
+ * @author Felix Mohr
+ *
+ * @param <L> The type of the list that is being decorated
+ * @param <E> The type of the elements in the decorated list
+ * @param <D> The type of the decorating elements
+ */
 public interface IListDecorator<L extends List<E>, E, D extends IElementDecorator<E>> extends List<D> {
 
+	/**
+	 * Gets the decorating wrapper of a list element.
+	 *
+	 * @param element
+	 * @return The decorating wrapper
+	 */
 	default D getDecorationForElement(final E element) {
 		try {
-			return this.getConstructorForDecoratedItems().newInstance(element);
+			return this.getConstructorForDecoratingItems().newInstance(element);
 		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
 			throw new DecorationFailedException("The decoration for the given element could not be obtained.", e);
 		}
 	}
 
+	/**
+	 * @return The class of the element decorators
+	 */
 	public Class<D> getTypeOfDecoratingItems();
 
+	/**
+	 * @return The class of the decorated elements
+	 */
 	public Class<E> getTypeOfDecoratedItems();
 
-	public Constructor<? extends D> getConstructorForDecoratedItems();
+	/**
+	 * Gets an constructor of the decorating element.
+	 * This is important because decorators must be created on the fly.
+	 *
+	 * @return The constructor of the decorating class
+	 */
+	public Constructor<? extends D> getConstructorForDecoratingItems();
 
+	/**
+	 * @return the original list, which is decorated
+	 */
 	public L getList();
 
 	@Override

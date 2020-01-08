@@ -8,7 +8,7 @@ import org.api4.java.algorithm.events.AlgorithmEvent;
 import org.api4.java.algorithm.exceptions.AlgorithmException;
 import org.api4.java.algorithm.exceptions.AlgorithmExecutionCanceledException;
 import org.api4.java.algorithm.exceptions.AlgorithmTimeoutedException;
-import org.api4.java.common.control.Cancelable;
+import org.api4.java.common.control.ICancelable;
 
 /**
  * The algorithms should actually also be interruptible, but since this is often not the case,
@@ -26,7 +26,7 @@ import org.api4.java.common.control.Cancelable;
  * @param <O>
  *            class of which solution candidates and the eventually returned result stem from
  */
-public interface IAlgorithm<I, O> extends Iterable<AlgorithmEvent>, Iterator<AlgorithmEvent>, Callable<O>, Cancelable {
+public interface IAlgorithm<I, O> extends Iterable<AlgorithmEvent>, Iterator<AlgorithmEvent>, Callable<O>, ICancelable {
 
 	/**
 	 * @return The input that has been given to the algorithm.

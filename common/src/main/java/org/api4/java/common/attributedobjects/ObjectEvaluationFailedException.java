@@ -1,7 +1,14 @@
 package org.api4.java.common.attributedobjects;
 
-@SuppressWarnings("serial")
+/**
+ * Exception thrown if an object value (score) could not be computed.
+ *
+ * @author Felix Mohr
+ *
+ */
 public class ObjectEvaluationFailedException extends GetPropertyFailedException {
+
+	private static final long serialVersionUID = -5853009214657373288L;
 
 	public ObjectEvaluationFailedException(final String message) {
 		super(message);

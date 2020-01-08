@@ -3,11 +3,11 @@ package org.api4.java.common.aggregate;
 import java.util.List;
 
 /**
- * An aggregate function takes a collection of values and returnes a single value representing some kind of aggregation of the collection.
+ * An aggregate function takes a collection of values and returns a single value representing some kind of aggregation of the collection.
  * In the case of having a collection of reals, this can be for instance the minimum or the maximum.
  *
  * @author mwever
- * @param <D> The domain of the aggregation function. For
+ * @param <D> The domain of the aggregation function.
  */
 public interface IAggregateFunction<D> {
 

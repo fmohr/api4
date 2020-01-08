@@ -11,7 +11,7 @@ package org.api4.java.common.math;
  * 3) d(a,b) = d(y,x)
  * 4) d(a,c) \leq d(a,b) + d(b,c)
  *
- * @author fmohr, mwever
+ * @author Felix Mohr, Marcel Wever
  *
  * @param <T> The type of objects to calculate a distance between, which defines the set T (see above).
  */

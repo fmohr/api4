@@ -1,7 +1,9 @@
 package org.api4.java.common.attributedobjects;
 
 /**
- * gets a property P of an object of class C
+ * Gets a property P of an object of class C.
+ *
+ * @author Felix Mohr
  */
 public interface IGetter<C, P> {
 

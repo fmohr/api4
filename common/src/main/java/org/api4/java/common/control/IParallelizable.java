@@ -1,8 +1,10 @@
-package org.api4.java.common.parallelization;
+package org.api4.java.common.control;
 
 /**
+ * This interface can be implemented by process classes.
+ * It allows to configure the number of CPUs that may be used by the process.
  *
- * @author mwever
+ * @author Marcel Wever
  */
 public interface IParallelizable {
 
