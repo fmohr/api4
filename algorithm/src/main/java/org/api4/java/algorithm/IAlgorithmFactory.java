@@ -8,10 +8,9 @@ package org.api4.java.algorithm;
  * @author Felix Mohr
  *
  * @param <I> Input type of the algorithm
- * @param <O> Output type of the algorithm
  * @param <A> Algorithm type
  */
-public interface IAlgorithmFactory<I, O, A extends IAlgorithm<I, O>> {
+public interface IAlgorithmFactory<I, A extends IAlgorithm> {
 
 	/**
 	 * @return An instance of the algorithm class based on the current configuration of the factory

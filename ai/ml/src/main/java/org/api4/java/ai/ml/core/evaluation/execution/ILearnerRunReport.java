@@ -1,6 +1,6 @@
 package org.api4.java.ai.ml.core.evaluation.execution;
 
-import org.api4.java.ai.ml.core.dataset.supervised.ILabeledDataset;
+import org.api4.java.ai.ml.core.dataset.IDataset;
 import org.api4.java.ai.ml.core.evaluation.IPredictionAndGroundTruthTable;
 
 public interface ILearnerRunReport {
@@ -14,9 +14,9 @@ public interface ILearnerRunReport {
 
 	public Throwable getException();
 
-	public ILabeledDataset<?> getTrainSet();
+	public IDataset getTrainSet();
 
-	public ILabeledDataset<?> getTestSet();
+	public IDataset getTestSet();
 
 	public IPredictionAndGroundTruthTable<?, ?> getPredictionDiffList();
 }

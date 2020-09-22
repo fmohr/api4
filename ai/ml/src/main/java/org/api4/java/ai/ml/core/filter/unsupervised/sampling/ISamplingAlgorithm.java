@@ -7,10 +7,10 @@ import org.api4.java.algorithm.IAlgorithm;
 /**
  * Interface for sampling algorithms. Sampling algorithms take a dataset as input and return a (reduced) dataset as their output.
  *
- * @author fmohr
+ * @author Felix Mohr
  *
  */
-public interface ISamplingAlgorithm<D extends IDataset<?>> extends IAlgorithm<D, D> {
+public interface ISamplingAlgorithm<D extends IDataset> extends IAlgorithm {
 
 	public D nextSample() throws DatasetCreationException, InterruptedException;
 

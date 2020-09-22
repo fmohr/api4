@@ -22,4 +22,7 @@ public interface IInstanceSchemaHandler {
 		return IntStream.range(0, this.getInstanceSchema().getNumAttributes()).mapToObj(x -> this.getInstanceSchema().getAttribute(x)).collect(Collectors.toList());
 	}
 
+	public default IAttribute getLabelAttribute() {
+		return this.getInstanceSchema().getLabelAttribute();
+	}
 }

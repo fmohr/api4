@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 /**
- * The IListDecorator can be used treat a list of objects of type E as a list of objects of another (potentially unrelated) decorator type D.
+ * The IListDecorator can be used to treat a list of objects of type E as a list of objects of another (potentially unrelated) decorator type D.
  *
  * This can be helpful if you want to treat some list class L of a third-party library as a list of elements you need in your specific context.
  * You cannot change the definitions of L (and the interfaces it implements), but you can create a simple wrapper for L that implements the

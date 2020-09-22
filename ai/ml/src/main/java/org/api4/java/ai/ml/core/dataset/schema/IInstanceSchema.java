@@ -22,4 +22,7 @@ public interface IInstanceSchema {
 
 	public IInstanceSchema getCopy();
 
+	public IAttribute getLabelAttribute();
+
+	public void replaceLabelAttribute(IAttribute labelAttribute);
 }

@@ -5,13 +5,11 @@ package org.api4.java.algorithm.events.result;
  *
  * @author Felix Mohr
  *
- * @param <O> solution type
- * @param <V> score type
  */
-public interface IScoredSolutionCandidateFoundEvent<O, V extends Comparable<V>> extends ISolutionCandidateFoundEvent<O> {
+public interface IScoredSolutionCandidateFoundEvent extends ISolutionCandidateFoundEvent {
 
 	/**
 	 * @return The score of the solution
 	 */
-	public V getScore();
+	public Object getScore();
 }

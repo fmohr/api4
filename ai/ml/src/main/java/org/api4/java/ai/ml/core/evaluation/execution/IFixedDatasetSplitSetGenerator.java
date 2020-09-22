@@ -3,7 +3,7 @@ package org.api4.java.ai.ml.core.evaluation.execution;
 import org.api4.java.ai.ml.core.dataset.IDataset;
 import org.api4.java.ai.ml.core.dataset.splitter.SplitFailedException;
 
-public interface IFixedDatasetSplitSetGenerator<D extends IDataset<?>> extends IDatasetSplitSetGenerator<D> {
+public interface IFixedDatasetSplitSetGenerator<D extends IDataset> extends IDatasetSplitSetGenerator<D> {
 
 	@Override
 	public default IDatasetSplitSet<D> nextSplitSet(final D data) {

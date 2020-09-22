@@ -9,10 +9,10 @@ import org.api4.java.algorithm.events.IAlgorithmEvent;
  *
  * @param <O> type of solutions
  */
-public interface ISolutionCandidateFoundEvent<O> extends IAlgorithmEvent {
+public interface ISolutionCandidateFoundEvent extends IAlgorithmEvent {
 
 	/**
 	 * @return The solution candidate
 	 */
-	public O getSolutionCandidate();
+	public Object getSolutionCandidate();
 }

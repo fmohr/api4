@@ -26,12 +26,12 @@ import org.api4.java.common.control.ICancelable;
  * @param <O>
  *            class of which solution candidates and the eventually returned result stem from
  */
-public interface IAlgorithm<I, O> extends Iterable<IAlgorithmEvent>, Iterator<IAlgorithmEvent>, Callable<O>, ICancelable {
+public interface IAlgorithm extends Iterable<IAlgorithmEvent>, Iterator<IAlgorithmEvent>, Callable<Object>, ICancelable {
 
 	/**
 	 * @return The input that has been given to the algorithm.
 	 */
-	public I getInput();
+	public Object getInput();
 
 	/**
 	 * Registers a listener to the algorithm's event bus.
@@ -111,7 +111,7 @@ public interface IAlgorithm<I, O> extends Iterable<IAlgorithmEvent>, Iterator<IA
 	 * Overrides the call of Callable to restrict the set of allowed exceptions
 	 */
 	@Override
-	public O call() throws InterruptedException, AlgorithmExecutionCanceledException, AlgorithmTimeoutedException, AlgorithmException;
+	public Object call() throws InterruptedException, AlgorithmExecutionCanceledException, AlgorithmTimeoutedException, AlgorithmException;
 
 	/**
 	 * globally unique identifier for the algorithm run.

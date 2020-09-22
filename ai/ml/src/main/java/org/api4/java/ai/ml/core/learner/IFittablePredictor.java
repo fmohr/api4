@@ -7,12 +7,11 @@ import org.api4.java.ai.ml.core.evaluation.IPredictionBatch;
 import org.api4.java.ai.ml.core.exception.PredictionException;
 import org.api4.java.ai.ml.core.exception.TrainingException;
 
-public interface IFittablePredictor<I extends IInstance, D extends IDataSource<? extends I>> extends IFittable<I, D>, IPredictor<I, D> {
+public interface IFittablePredictor extends IFittable, IPredictor {
 
-	public IPrediction fitAndPredict(D dTrain, I xTest) throws TrainingException, PredictionException, InterruptedException;
+	public IPrediction fitAndPredict(IDataSource dTrain, IInstance xTest) throws TrainingException, PredictionException, InterruptedException;
 
-	public IPredictionBatch fitAndPredict(D dTrain, I[] xTest) throws TrainingException, PredictionException, InterruptedException;
+	public IPredictionBatch fitAndPredict(IDataSource dTrain, IInstance[] xTest) throws TrainingException, PredictionException, InterruptedException;
 
-	public IPredictionBatch fitAndPredict(D dTrain, D dTest) throws TrainingException, PredictionException, InterruptedException;
-
+	public IPredictionBatch fitAndPredict(IDataSource dTrain, IDataSource dTest) throws TrainingException, PredictionException, InterruptedException;
 }

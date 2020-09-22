@@ -6,12 +6,11 @@ import org.api4.java.ai.ml.core.dataset.descriptor.IDatasetDescriptor;
 /**
  * A dataset deserializer reads in the contents of a file to return it as a dataset object.
  *
- * @author mwever
+ * @author mwever, Felix Mohr
  *
- * @param <D> The type of dataset to be deserialized.
  */
-public interface IDatasetDeserializer<D extends IDataset<?>> {
+public interface IDatasetDeserializer {
 
-	public D deserializeDataset(final IDatasetDescriptor datasetDescription) throws DatasetDeserializationFailedException, InterruptedException;
+	public IDataset deserializeDataset(final IDatasetDescriptor datasetDescription) throws DatasetDeserializationFailedException, InterruptedException;
 
 }

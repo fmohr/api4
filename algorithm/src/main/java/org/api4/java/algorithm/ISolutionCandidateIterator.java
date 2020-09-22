@@ -11,10 +11,8 @@ import org.api4.java.algorithm.exceptions.AlgorithmTimeoutedException;
  *
  * @author Felix Mohr
  *
- * @param <I> type of inputs
- * @param <O> type of outputs
  */
-public interface ISolutionCandidateIterator<I, O> extends IAlgorithm<I, O> {
+public interface ISolutionCandidateIterator extends IAlgorithm {
 
 	/**
 	 * @return next potential solution candidate
@@ -24,7 +22,7 @@ public interface ISolutionCandidateIterator<I, O> extends IAlgorithm<I, O> {
 	 * @throws InterruptedException
 	 * @throws AlgorithmException
 	 */
-	public O nextSolutionCandidate() throws AlgorithmTimeoutedException, AlgorithmExecutionCanceledException, InterruptedException, AlgorithmException;
+	public Object nextSolutionCandidate() throws AlgorithmTimeoutedException, AlgorithmExecutionCanceledException, InterruptedException, AlgorithmException;
 
 	/**
 	 *
@@ -34,5 +32,5 @@ public interface ISolutionCandidateIterator<I, O> extends IAlgorithm<I, O> {
 	 * @throws InterruptedException
 	 * @throws AlgorithmException
 	 */
-	public ISolutionCandidateFoundEvent<O> nextSolutionCandidateEvent() throws AlgorithmTimeoutedException, AlgorithmExecutionCanceledException, InterruptedException, AlgorithmException;
+	public ISolutionCandidateFoundEvent nextSolutionCandidateEvent() throws AlgorithmTimeoutedException, AlgorithmExecutionCanceledException, InterruptedException, AlgorithmException;
 }
